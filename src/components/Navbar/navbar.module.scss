@@ -18,15 +18,18 @@ nav{
     }
 
     button{
-    background-color: #006ce4;
+    background-color: var(--primaryColor);
       color: #fff;
       outline: none;
       border-radius: 25px;
       border: none;
       padding: 1rem 2rem;
-      font: normal 500 18px/20px Inter;
       letter-spacing: 1px;
       cursor: pointer;
+      h1{
+          font: normal 500 18px/20px Inter;
+
+      }
     }
 
       .nav__logo{

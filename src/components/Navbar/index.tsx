@@ -47,7 +47,7 @@ const Navbar = () => {
               <h5>{contacts.email}</h5>
             </div>
           </div>
-        <button>Get Free Consultation</button>
+        <button> <h1> Get Free Consultation</h1></button>
         </div>
 
         <div className={styles.responsive__icon__box} onClick={toggleMenu}>
