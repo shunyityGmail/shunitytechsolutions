@@ -1,0 +1,71 @@
+.contactUs__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem 6rem;
+  @media screen and (width<950px) {
+    padding: 2rem 1rem;
+}
+
+
+  .contactUs__heading {
+    font: normal 600 40px/45px Inter;
+    width: 400px;
+    @media screen and (width<950px) {
+        width: 100%;
+    }
+  }
+
+  .contactUs__cards {
+    padding: 1rem 0rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media screen and (width<950px) {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contactUs__card {
+      display: flex;
+      width: 25vw;
+      flex-direction: column;
+      background-color: #fff;
+      gap: 1rem;
+      border-radius: 5px;
+      padding: 2rem;
+      align-items: center;
+      border: 1px solid #ddd;
+      transition: transform 0.3s ease;
+      &:hover {
+        border: none;
+        transform: scale(1);
+        box-shadow: rgba(97, 97, 97, 0.35) 0px 5px 15px;
+        border: none;
+      }
+      @media screen and (width<950px) {
+        width: 100%;
+    }
+
+      .card__image{
+        width: 20%;
+        height: 20%;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+      }
+
+      .card__title{
+        font: normal 600 22px/30px Inter;
+      }
+      .card__info{
+        font: normal 400 16px/25px Inter;
+        color: var(--lightText);
+      }
+    }
+  }
+}

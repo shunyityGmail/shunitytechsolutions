@@ -1,0 +1,40 @@
+// src/NotFound.scss
+.not_found {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 6rem;
+    align-items: center;
+    @media screen and (width<950px) {
+        padding: 3rem 1rem;
+    }
+  
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    p {
+      font-size: 1.2rem;
+    }
+  
+    .home_button {
+        background-color: #230fbf;
+        background-image: linear-gradient(to right, #230fbf 0%, #b42bd1 100%);
+        color: #fff;
+        outline: none;
+        border-radius: 25px;
+        border: none;
+        padding: 1rem 2rem;
+        font: normal 500 18px/20px Inter;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: background-image 0.3s ease;
+        &:hover {
+          background-image: linear-gradient(to right, #b42bd1 0%, #230fbf 100%);
+        }
+      
+    }
+  }
+  

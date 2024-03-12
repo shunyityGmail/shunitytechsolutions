@@ -1,0 +1,49 @@
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    gap: 1rem;
+    margin: 0 auto;
+    @media screen and (width<950px) {
+      width: 100%;
+      margin: 0;
+    }
+
+    .form__title{
+        padding: 1rem 0rem;
+        font: normal 600 35px/40px Inter;
+        text-align: center;
+    }
+  
+    input,
+    textarea {
+      padding: 1rem 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+  
+      &:focus {
+        outline: none;
+        border-color: dodgerblue;
+      }
+    }
+  
+    button {
+        background-color: #230fbf;
+        background-image: linear-gradient(to right, #230fbf 0%, #b42bd1 100%);
+        color: #fff;
+        outline: none;
+        border-radius: 25px;
+        border: none;
+        padding: 1rem 2rem;
+        font: normal 500 18px/20px Inter;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: background-image 0.3s ease;
+        &:hover {
+          background-image: linear-gradient(to right, #b42bd1 0%, #230fbf 100%);
+        }
+      }
+  }
+  

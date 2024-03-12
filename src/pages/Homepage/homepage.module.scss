@@ -1,0 +1,164 @@
+.homepage__container {
+  display: flex;
+  align-items: center;
+  padding: 4rem 6rem;
+  justify-content: space-between;
+
+  @media screen and (width<950px) {
+    flex-direction: column;
+    padding: 6rem 1rem 3rem 1rem;
+  }
+
+  .homepage__details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+
+    .home__main__heading {
+      white-space: nowrap;
+      font: normal 600 80px/80px Inter;
+    }
+    .home__main__heading_x {
+      font: normal 600 80px/80px Inter;
+      white-space: nowrap;
+      animation: typing 3s steps(60, end), blink-caret 0.75s step-end infinite;
+    }
+    .home__description {
+      font: normal 500 16px/25px Inter;
+      color: var(--homeText);
+    }
+
+    button {
+      background-color: #230fbf;
+      background-image: linear-gradient(to right, #230fbf 0%, #b42bd1 100%);
+      color: #fff;
+      outline: none;
+      border-radius: 25px;
+      border: none;
+      padding: 1rem 2rem;
+      font: normal 500 18px/20px Inter;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background-image 0.3s ease;
+      &:hover {
+        background-image: linear-gradient(to right, #b42bd1 0%, #230fbf 100%);
+      }
+    }
+  }
+
+  .homepage__images {
+    width: 45vw;
+    height: 45vh;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #230fbf;
+  }
+}
+
+.homeDetails__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 3rem 2rem 2rem 2rem;
+  @media screen and (width<950px) {
+    flex-direction: column;
+    padding: 3rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .home__solutions__card {
+    display: flex;
+    width: 28vw;
+    flex-direction: column;
+    background-color: #fff;
+    gap: 1rem;
+    border-radius: 5px;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+    &:hover {
+      border: none;
+      transform: scale(1);
+      box-shadow: rgba(44, 44, 44, 0.35) 0px 5px 15px;
+      button {
+        animation: blink-caret 0.75s step-end infinite;
+        border-right: 5px solid #230fbf;
+      }
+    }
+    @media screen and (width<950px) {
+      width: 100%;
+    }
+    .card__icon {
+      justify-self: flex-start;
+      width: 18%;
+      height: 18%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .card__title {
+      font: normal 600 22px/25px Inter;
+      width: 18vw;
+      @media screen and (width<950px) {
+        width: 100%;
+        font: normal 600 18px/21px Inter;
+      }
+    }
+
+    .line {
+      width: 100%;
+      height: 1px;
+      border-radius: 50%;
+      background-color: #aeadad;
+    }
+
+    .card__description {
+      font: normal 400 16px/25px Inter;
+      color: var(--lightText);
+    }
+
+    button {
+      color: var(--primaryColor);
+      outline: none;
+      background-color: #fff;
+      border: none;
+      text-align: left;
+      font: normal 600 14px/14px Inter;
+      cursor: pointer;
+      width: fit-content;
+      padding: 0rem 0.5rem 0rem 0rem;
+      @media screen and (width<950px) {
+        padding: 0rem 0.5rem 0rem 0rem;
+        font: normal 600 14px/14px Inter;
+      }
+    }
+  }
+}

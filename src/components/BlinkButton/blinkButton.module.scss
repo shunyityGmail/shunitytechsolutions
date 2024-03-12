@@ -1,0 +1,25 @@
+.blinkButton__container{
+    padding: 1rem 2rem;
+      width: fit-content;
+      text-align: center;
+      background-color: var(--bgColor);
+      border-radius: 25px;
+      h1 {
+        white-space: nowrap;
+        font-weight: 500;
+        font-size: 14px;
+        animation: blink-caret 0.75s step-end infinite;
+        border-right: 5px solid var(--primaryColor);
+        padding: 0 0.5rem;
+      }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #230fbf;
+    }
+  }
