@@ -1,5 +1,6 @@
 nav{
     position: sticky;
+    z-index: 2;
     background: var(--bgColor);
     transition: 0.3s;
     top: 0;
