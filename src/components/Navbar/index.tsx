@@ -51,9 +51,9 @@ const Navbar = () => {
       <div className={styles.nav__links}>
         <ul>
           {NAV__LINKS?.map((item, index) => (
+            <li key={index}>
             <Link
               to={item.path}
-              key={index}
               style={{
                 color:
                   location.pathname === item.path
@@ -61,11 +61,10 @@ const Navbar = () => {
                     : '#000',
               }}
             >
-              <li>
 
               {item.title}
-              </li>
             </Link>
+          </li>
           ))}
         </ul>
 
@@ -79,9 +78,9 @@ const Navbar = () => {
           className={styles.responsive__nav}
         >
           {NAV__LINKS?.map((item, index) => (
+            <li key={index}>
             <Link
               to={item.path}
-              key={index}
               onClick={toggleMenu}
               style={{
                 color:
@@ -90,11 +89,10 @@ const Navbar = () => {
                     : '#000',
               }}
             >
-              <li>
 
               {item.title}
-              </li>
             </Link>
+              </li>
           ))}
         </motion.ul>
       )}

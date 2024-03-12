@@ -81,9 +81,17 @@ nav{
             display: flex;
             align-items: center;
             height: 100%;
-
-         a{
+            li{
+                height: 100%;
                 border: 1px solid rgb(203, 197, 197);
+                border-top: none;
+                border-right: none;
+                border-bottom: none;
+                &:nth-child(1){
+                    border-left: none;
+                }
+                
+                a{
                 padding: 0rem 2rem;
                 height: 100%;
                 border-top: none;
@@ -97,11 +105,10 @@ nav{
                 font: normal 500 16px/20px Inter;
                 cursor: pointer;
                 text-transform: capitalize;
+                
             }
-            a:nth-child(1) {
-                border-right: none;
-              }
         }
+    }
 
     }
 
