@@ -17,6 +17,18 @@ nav{
        padding: 0.5rem 1rem;
     }
 
+    button{
+    background-color: #230fbf;
+      color: #fff;
+      outline: none;
+      border-radius: 25px;
+      border: none;
+      padding: 1rem 2rem;
+      font: normal 500 18px/20px Inter;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+
       .nav__logo{
         width: 20vw;
         height: 8vh;
@@ -81,17 +93,9 @@ nav{
             display: flex;
             align-items: center;
             height: 100%;
-            li{
-                height: 100%;
-                border: 1px solid rgb(203, 197, 197);
-                border-top: none;
-                border-right: none;
-                border-bottom: none;
-                &:nth-child(1){
-                    border-left: none;
-                }
-                
-                a{
+            
+                li{
+                    border: 1px solid var(--navText);
                 padding: 0rem 2rem;
                 height: 100%;
                 border-top: none;
@@ -105,9 +109,12 @@ nav{
                 font: normal 500 16px/20px Inter;
                 cursor: pointer;
                 text-transform: capitalize;
+                &:nth-child(1){
+                    border-left: none;
+                }
                 
             }
-        }
+        
     }
 
     }
@@ -126,8 +133,8 @@ nav{
         @media screen and (width<950px) {
             display: flex;
         }
-        a{
-            text-decoration: none;
+        li{
+            list-style: none;
         }
     }
 }

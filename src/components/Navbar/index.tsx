@@ -2,7 +2,7 @@ import styles from './navbar.module.scss'
 import { SiGooglecontaineroptimizedos } from 'react-icons/si'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { RxHamburgerMenu } from 'react-icons/rx'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { contacts } from '../../constants/shunyityContacts'
 import { NAV__LINKS, TIME, WEEKDAYS } from '../../constants/navbar'
 import { useState } from 'react'
@@ -11,9 +11,15 @@ import { motion } from 'framer-motion'
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
 
   const toggleMenu = () => {
     setShowMenu(!showMenu)
+  }
+
+  const handleClick = (path: string) => {
+    toggleMenu()
+    navigate(path)
   }
 
   return (
@@ -41,6 +47,7 @@ const Navbar = () => {
               <h5>{contacts.email}</h5>
             </div>
           </div>
+        <button>Get Free Consultation</button>
         </div>
 
         <div className={styles.responsive__icon__box} onClick={toggleMenu}>
@@ -51,9 +58,9 @@ const Navbar = () => {
       <div className={styles.nav__links}>
         <ul>
           {NAV__LINKS?.map((item, index) => (
-            <li key={index}>
-            <Link
-              to={item.path}
+            <li
+              key={index}
+              onClick={() => navigate(item.path)}
               style={{
                 color:
                   location.pathname === item.path
@@ -61,13 +68,10 @@ const Navbar = () => {
                     : '#000',
               }}
             >
-
               {item.title}
-            </Link>
-          </li>
+            </li>
           ))}
         </ul>
-
       </div>
       {showMenu && (
         <motion.ul
@@ -78,10 +82,11 @@ const Navbar = () => {
           className={styles.responsive__nav}
         >
           {NAV__LINKS?.map((item, index) => (
-            <li key={index}>
-            <Link
-              to={item.path}
-              onClick={toggleMenu}
+            <li
+              key={index}
+              onClick={() => {
+                handleClick(item.path)
+              }}
               style={{
                 color:
                   location.pathname === item.path
@@ -89,10 +94,8 @@ const Navbar = () => {
                     : '#000',
               }}
             >
-
               {item.title}
-            </Link>
-              </li>
+            </li>
           ))}
         </motion.ul>
       )}
