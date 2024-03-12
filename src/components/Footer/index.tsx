@@ -9,9 +9,10 @@ import { contacts } from '../../constants/shunyityContacts'
 import { NAV__LINKS } from '../../constants/navbar'
 import { COPYRIGHT, HEADING1, HEADING2, HEADING4, SOCIALS } from '../../constants/footer'
 import { FORM__TITLE } from '../../constants/contactUs'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+  const navigate = useNavigate()
   return (
     <footer className={styles.footer__box}>
       <section className={styles.footer__section__1}>
@@ -37,11 +38,11 @@ const Footer = () => {
         <div className={styles.footer__nav}>
           <p className={styles.footer__heading}>{HEADING2}</p>
           {NAV__LINKS?.map((item, index)=>(
-            <Link to={item.path} key={index}>
-              <li>
+          
+              <li onClick={()=>navigate(item.path)} key={index}>
                 {item.title}
                 </li>
-                </Link>
+
           ))}
         </div>
         <div className={styles.footer__nav}>
