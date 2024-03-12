@@ -4,5 +4,6 @@ export const ROUTES = {
     BLOG:'/blog',
     CONTACTUS:'/contact-us',
     OURSOLUTIONS:'/our-solutions',
-    NOTFOUND:'*'
+    NOTFOUND:'*',
+    BLOGPAGE:'/blog/:id'
 }

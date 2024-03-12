@@ -8,6 +8,7 @@ import OurSolutions from './pages/OurSolutions'
 import ContactUs from './pages/ContactUs'
 import NotFound from './pages/NotFound'
 import BlogPage from './pages/BlogPage'
+import { ROUTES } from './constants/routes'
 
 function App() {
   return (
@@ -15,13 +16,13 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/blog" element={<Blog />}/>
-              <Route path="/blog/:id" element={<BlogPage/>}/>
-            <Route path="/our-solutions" element={<OurSolutions />} />
-            <Route path="/contact-us" element={<ContactUs />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path={ROUTES.HOME} element={<Homepage />} />
+            <Route path={ROUTES.ABOUTUS} element={<AboutUs />} />
+            <Route path={ROUTES.BLOG} element={<Blog />}/>
+              <Route path={ROUTES.BLOGPAGE} element={<BlogPage/>}/>
+            <Route path={ROUTES.OURSOLUTIONS} element={<OurSolutions />} />
+            <Route path={ROUTES.CONTACTUS} element={<ContactUs />} />
+            <Route path={ROUTES.NOTFOUND} element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
