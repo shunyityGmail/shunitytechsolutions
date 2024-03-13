@@ -4,6 +4,8 @@ import { BUTTON, texts } from '../../constants/homepage'
 import HomeDetails from './HomeDetails'
 import { HOME__TEXTS } from '../../constants/homepage'
 import BlinkButton from '../../components/BlinkButton'
+import OurSolutions from '../OurSolutions'
+import Testimonials from '../../components/Testimonials'
 
 const Homepage = () => {
   return (
@@ -40,6 +42,8 @@ const Homepage = () => {
         </div>
       </section>
       <HomeDetails />
+      <OurSolutions/>
+      <Testimonials/>
     </>
   )
 }
